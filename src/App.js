@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div class="card">
+      <img class="card-img-top" src={props.image} alt="Card image cap"/>
+      <div class="card-body">
+        <h5 class="card-title">{props.name}</h5>
+        <p class="card-text">
+          {props.description}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+        <a href="#" class="btn btn-primary">
+          Go somewhere
         </a>
-      </header>
+      </div>
     </div>
   );
 }
